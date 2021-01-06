@@ -10,5 +10,6 @@ public class test {
 
     public static void main(String[] args) throws Exception {
         System.out.println("这是主分支哈哈哈");
+        System.out.println("我改了东西");
     }
 }
