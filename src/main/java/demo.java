@@ -10,7 +10,7 @@ public class demo {
     public static void main(String[] args) throws Exception {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Calendar c = Calendar.getInstance();
-        c.add(Calendar.DAY_OF_MONTH, -1);
+        c.add(Calendar.DAY_OF_MONTH, -2);
         String date = sdf.format(c.getTime());
         System.out.println(date);
     }
