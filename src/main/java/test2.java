@@ -19,7 +19,7 @@ public class test2 {
 
         long t1 = System.currentTimeMillis();
         for (int i = 0; i < 7000; i++) {
-            if(strings.contains(i*3+"1")){
+            if(strings.contains(i*3+"")){
                 count1++;
                 System.out.println("set-"+count1);
             };
