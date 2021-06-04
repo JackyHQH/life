@@ -16,7 +16,6 @@ public class UserVo {
 
     @Override
     public String toString() {
-        System.out.println("sb");
         return "UserVo{" +
                 "name='" + name + '\'' +
                 ", sex='" + sex + '\'' +

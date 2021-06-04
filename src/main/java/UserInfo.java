@@ -53,7 +53,7 @@ public class UserInfo {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", birthday=" + birthday +
-                ", email='" + email + '\'' +
+                ", email='" + email       + '\'' +
                 '}';
     }
 }
