@@ -30,34 +30,34 @@ public class Salary2021 {
         everyMoon.add(basicSalary-fund+daySalary*9);
 
         //四月份涨薪4000 但是公积金还是涨薪前的
-        double addBasicSalary = basicSalary + 4000d;
-        extraSalary = addBasicSalary * 0.1;
-        everyMoon.add(addBasicSalary-fund+extraSalary);
+        basicSalary = basicSalary + 4000d;
+        extraSalary = basicSalary * 0.1;
+        everyMoon.add(basicSalary-fund+extraSalary);
 
         //五月份理论加班一天 双倍
-        extraSalary = addBasicSalary * 0.101437;
-        everyMoon.add(addBasicSalary-fund+extraSalary+daySalary*2);
+        extraSalary = basicSalary * 0.175;
+        everyMoon.add(basicSalary-fund+extraSalary);
 
         //六月份 理论上没有加班
-        everyMoon.add(addBasicSalary-fund+extraSalary);
+        everyMoon.add(basicSalary-fund+extraSalary);
 
         //七月份 理论上没有加班
-        everyMoon.add(addBasicSalary-fund+extraSalary);
+        everyMoon.add(basicSalary-fund+extraSalary);
 
         //八月份 理论上没有加班
-        everyMoon.add(addBasicSalary-fund+extraSalary);
+        everyMoon.add(basicSalary-fund+extraSalary);
 
         //九月份 理论上没有加班
-        everyMoon.add(addBasicSalary-fund+extraSalary);
+        everyMoon.add(basicSalary-fund+extraSalary);
 
         //十月份 理论上没有加班
-        everyMoon.add(addBasicSalary-fund+extraSalary);
+        everyMoon.add(basicSalary-fund+extraSalary);
 
         //十一月份 理论上没有加班
-        everyMoon.add(addBasicSalary-fund+extraSalary);
+        everyMoon.add(basicSalary-fund+extraSalary);
 
         //十二月份 理论上没有加班
-        everyMoon.add(addBasicSalary-fund+extraSalary);
+        everyMoon.add(basicSalary-fund+extraSalary);
 
         //计算后打印
         getSalary(everyMoon);
