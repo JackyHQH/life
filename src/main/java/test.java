@@ -71,4 +71,10 @@ public class test {
 
         return 2;
     }
+
+
+
+    private void test(){
+        System.out.println(123123123123123123L);
+    }
 }

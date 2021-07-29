@@ -5,28 +5,40 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Salary2020 {
+public class SalaryCommon {
 
     public static void main(String[] args) throws Exception {
         List<Double> everyMoon = new ArrayList<>();
 
 
         //基本工资
-        double basicSalary = 15000d;
+        double basicSalary = 26000d;
         //公积金
         double fund = basicSalary *0.07;
         //个人承担社保
         double reduce = basicSalary*0.105;
         //每日工资
         double daySalary = basicSalary /21.75;
-        System.out.println(basicSalary/23);
+        System.out.println("日工资"+basicSalary/23);
 
         System.out.println("缴纳社保"+reduce+"元");
         System.out.println("缴纳公积金"+fund+"元");
+        //补贴
+        double butie = 0;
 
-//        everyMoon.add(basicSalary+daySalary*2+652.17d-fund-reduce);
-//        everyMoon.add(basicSalary+daySalary*2-fund-reduce);
-        everyMoon.add(basicSalary-fund-reduce);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
+        everyMoon.add(basicSalary-fund-reduce+butie);
 
 
 
@@ -42,7 +54,7 @@ public class Salary2020 {
         //免征起点
         double start = 5000d;
         //额外扣除 没有填报
-        start = start;
+        start = start +1500d;
 
         List<Double> everyTax = SalaryTool.getEveryTab(everyMoon,start);
         //计算五险一金

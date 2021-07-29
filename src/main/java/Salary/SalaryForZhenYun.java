@@ -2,63 +2,33 @@ package Salary;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Salary2021 {
+public class SalaryForZhenYun {
     public static void main(String[] args) throws Exception {
         List<Double> everyMoon = new ArrayList<>();
         //基本工资
-        double basicSalary = 16000d;
+        double basicSalary = 1000d;
         //扣除个人公积金
         double fund = basicSalary*0.07;
         //迭代绩效
-        double extraSalary = basicSalary * 0.1;
+        double extraSalary = basicSalary * 0.15;
         //每日工资
         double daySalary = basicSalary/21.75;
 
-
-        //一月份无迭代绩效 工作日20天 个人公积金0.7
-        everyMoon.add(daySalary*20-fund);
-
-        //二月份基本工资-公积金+绩效
+        //每一行就是一个月
         everyMoon.add(basicSalary-fund+extraSalary);
-
-        //三月份发了过年加班的工资 9天份的 无绩效
-        everyMoon.add(basicSalary-fund+daySalary*9);
-
-        //四月份涨薪4000 但是公积金还是涨薪前的
-        basicSalary = basicSalary + 4000d;
-        extraSalary = basicSalary * 0.1;
-        System.out.println("日工资"+daySalary);
         everyMoon.add(basicSalary-fund+extraSalary);
-
-        //五月份
-        extraSalary = basicSalary * 0.175;
         everyMoon.add(basicSalary-fund+extraSalary);
-
-        //六月份
-        extraSalary = 5267.61d;
         everyMoon.add(basicSalary-fund+extraSalary);
-
-        //七月份 理论上没有加班
         everyMoon.add(basicSalary-fund+extraSalary);
-
-        //八月份 理论上没有加班
         everyMoon.add(basicSalary-fund+extraSalary);
-
-        //九月份 理论上没有加班
         everyMoon.add(basicSalary-fund+extraSalary);
-
-        //十月份 理论上没有加班
         everyMoon.add(basicSalary-fund+extraSalary);
-
-        //十一月份 理论上没有加班
         everyMoon.add(basicSalary-fund+extraSalary);
-
-        //十二月份 理论上没有加班
+        everyMoon.add(basicSalary-fund+extraSalary);
+        everyMoon.add(basicSalary-fund+extraSalary);
         everyMoon.add(basicSalary-fund+extraSalary);
 
         //计算后打印
@@ -72,7 +42,7 @@ public class Salary2021 {
         //免征起点
         double start = 5000d;
         //额外扣除 没有填报
-        start = start;
+//        start = start +1500d;
 
         List<Double> everyTax = SalaryTool.getEveryTab(everyMoon,start);
         //计算五险一金
@@ -85,7 +55,5 @@ public class Salary2021 {
         double sumGet = everyMoon.stream().collect(Collectors.summarizingDouble(value -> value)).getSum();
         double sumTax = everyTax.stream().collect(Collectors.summarizingDouble(value -> value)).getSum();
         System.out.println("全年税前:"+df.format(sumGet)+"元-----全年共缴纳税款:"+df.format(sumTax)+"元-------"+"全年税后所得(不含五险):"+(df.format(sumGet-sumTax))+"元");
-
-        System.out.println(22078.67d - 13678.67d);
     }
 }
