@@ -7,6 +7,7 @@ public class AnotherJSONObject extends JSONObject{
 
     public static void main(String[] args) {
         System.out.println("瞎几把提交1");
+        System.out.println("瞎几把提交2");
     }
 
 }
