@@ -5,13 +5,8 @@ import java.util.Map;
 
 public class AnotherJSONObject extends JSONObject{
 
-    @Autowired
-    private Map<String, Object> map;
-
-    @Override
-    public Object put(String key, Object value) {
-        this.map.put("key", "canm");
-        return this.map.put(key, value);
+    public static void main(String[] args) {
+        System.out.println("瞎几把提交1");
     }
 
 }
