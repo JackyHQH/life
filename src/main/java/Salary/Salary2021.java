@@ -59,14 +59,14 @@ public class Salary2021 {
 
         //十月份加了三天班
         extraSalary = daySalary * 7 + 3321;
-        System.out.println(extraSalary);
         everyMoon.add(basicSalary - fund + extraSalary);
 
         //十一月份 理论上没有加班
-        extraSalary = 4000d;
+        extraSalary = 4981.26d;
         everyMoon.add(basicSalary - fund + extraSalary);
 
         //十二月份 理论上没有加班
+        extraSalary = 4387.8d+1400;
         everyMoon.add(basicSalary - fund + extraSalary);
 
         //计算后打印

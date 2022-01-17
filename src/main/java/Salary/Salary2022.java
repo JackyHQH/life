@@ -15,23 +15,21 @@ public class Salary2022 {
         double fund = basicSalary * 0.07;
         //迭代绩效
         double extraSalary = basicSalary * 0.15;
+        basicSalary = 22000d;
         //每日工资
         double daySalary = basicSalary / 21.75;
 
-        //一月份无迭代绩效 工作日20天 个人公积金0.7
         everyMoon.add(basicSalary - fund + extraSalary);
 
         //二月份基本工资-公积金+绩效
-        basicSalary = 30000d;
-        daySalary = basicSalary / 21.75;
         extraSalary = basicSalary * 0.15;
-        everyMoon.add(basicSalary - fund);
+        everyMoon.add(basicSalary - fund + extraSalary);
         //三月份
-        everyMoon.add(basicSalary - fund + daySalary*9);
+        everyMoon.add(basicSalary - fund + extraSalary);
 
         //四月份
         everyMoon.add(basicSalary - fund + extraSalary);
-
+        fund = basicSalary * 0.07;
         //五月份
         everyMoon.add(basicSalary - fund + extraSalary);
 

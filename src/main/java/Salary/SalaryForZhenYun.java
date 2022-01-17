@@ -9,7 +9,7 @@ public class SalaryForZhenYun {
     public static void main(String[] args) throws Exception {
         List<Double> everyMoon = new ArrayList<>();
         //基本工资
-        double basicSalary = 1000d;
+        double basicSalary = 10000d;
         //扣除个人公积金
         double fund = basicSalary*0.07;
         //迭代绩效
